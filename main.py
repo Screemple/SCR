@@ -5,24 +5,20 @@
 #- 6 -> да
 #- 7 -> да
 #- 1 -> нет
-import pandas as pd
-def day(a,start, end):
-    quit = True
-    start = 1
-    end = 7
-    while (quit and a >= start):
-        if a in range (start, end):
-            if a <= 5:
-                print ("Сегодня рабочий день")
-                quit = False
-            else:
-                print("Сегодня выходной")
-                quit = False
+a = int(input("Введите число"))
+quit = True
+start = 1 
+end = 7
+while (quit and a >= start):
+    if a <= 5:
+        print ("Сегодня рабочий день")
+        quit = False
         else:
-                print("Ошибка, дней всего 7", ", ", a, "не входит в диапозон")
-                quit = False
-                return(a)
-print(day(5,1,7))
+            print("Сегодня выходной")
+            quit = False
+          else:
+            print("Ошибка,дней всего 7","," ,a, "не входит в диапозон")
+            quit = False
 
 
 
