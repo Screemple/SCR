@@ -5,20 +5,21 @@
 #- 6 -> да
 #- 7 -> да
 #- 1 -> нет
-a = int(input("Введите число"))
+a = int(input("Введите число "))
 quit = True
 start = 1 
-end = 7
+end = 8
 while (quit and a >= start):
-    if a <= 5:
-        print ("Сегодня рабочий день")
-        quit = False
+    if a in range (start, end):
+        if a <= 5:
+            print ("Сегодня рабочий день")
+            quit = False
         else:
             print("Сегодня выходной")
             quit = False
-          else:
-            print("Ошибка,дней всего 7","," ,a, "не входит в диапозон")
-            quit = False
+    else:
+        print("Ошибка, дней всего 7","," ,a, "не входит в диапозон")
+        quit = False
 
 
 
